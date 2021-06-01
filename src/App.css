@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap");
 :root {
   --overlay-main: #3d6cb9;
   --overlay-left: rgba(0, 0, 0, 0.65);
@@ -34,6 +35,32 @@ body::after {
   display: flex;
 }
 
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #666;
+}
+
+.link {
+  height: auto;
+  /* background-color: wheat; */
+  /* transition: all ease-in 1s; */
+}
+
+.link .underline {
+  width: 0;
+  height: 3px;
+  background-color: white;
+  transition: all ease-in-out 0.3s;
+}
+
+.link:hover .underline {
+  width: 100%;
+}
+
 .container {
   margin: auto;
   max-width: 1300px;
@@ -54,12 +81,16 @@ body::after {
   transform: translate(-50%, 0);
 }
 
+.yellow {
+  color: rgb(255, 221, 67);
+  cursor: pointer;
+}
+
 .navbar .logo h1 {
+  font-family: "Source Code Pro", monospace;
   font-size: 2rem;
-  font-style: italic;
   user-select: none;
   cursor: pointer;
-  text-transform: uppercase;
 }
 
 /* Search Bar */
@@ -150,17 +181,54 @@ body::after {
 
 /* DELETE IT */
 .card {
-  height: 200px;
-  width: 800px;
+  height: 150px;
+  width: 600px;
+  padding: 15px;
   box-shadow: 0px 20px 20px black;
-  background-color: white;
   margin: 25px auto;
   text-align: center;
+  display: flex;
+  /* border: 2.5px solid white; */
+  border-radius: 10px;
+  position: relative;
+  background: rgba(0, 0, 0, 0.65);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  border-radius: 10px;
 }
 
-.card img {
+.profile-img {
+  height: 100%;
+  width: 150px;
+  padding: 5px;
+  display: grid;
+  place-items: center;
+}
+
+.profile-img img {
   height: 100px;
   border-radius: 50%;
+  box-shadow: 0px 0px 5px black;
+}
+
+.profile {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: calc(100% - 150px);
+  border-radius: 10px;
+}
+
+.profile h3 {
+  font-size: 1.5rem;
+}
+
+.profile a {
+  color: var(--overlay-main);
+  margin: 10px;
 }
 
 .users-container {
