@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import React from 'react';
+import { useState } from "react";
+import React from "react";
 
 const Search = () => {
-  const [Search, setSearch] = useState('');
+  const [Search, setSearch] = useState("");
 
   const onChange = (e) => {
     setSearch(e.target.value);
@@ -28,8 +28,6 @@ const Search = () => {
             />
             <i className='fa fa-search' />
           </form>
-
-          <div className='ravi'></div>
         </div>
       </div>
     </div>
