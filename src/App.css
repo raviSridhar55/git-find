@@ -41,7 +41,6 @@ body::after {
 .navbar {
   height: 100px;
   width: 100vw;
-
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -105,7 +104,6 @@ body::after {
 
 .search-form:hover {
   width: 100%;
-  cursor: pointer;
 }
 
 .search-form:hover input {
