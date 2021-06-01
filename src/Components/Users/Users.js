@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import UserItem from "./UserItem";
 
 const Users2 = ({ users }) => {
