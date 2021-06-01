@@ -30,9 +30,9 @@ const Search = () => {
           </form>
         </div>
       </div>
-      <h1>Ravi Sridhar</h1>
     </div>
   );
 };
+
 
 export default Search;
