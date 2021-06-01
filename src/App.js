@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
-import "./App.css";
-import Nav from "./Components/Layouts/Nav.jsx";
-import Search from "./Components/Users/Search";
-import Users from "./Components/Users/Users";
-import axios from "axios";
+import { useState } from 'react';
+import './App.css';
+import Nav from './Components/Layouts/Nav.jsx';
+import Search from './Components/Users/Search';
+import Users from './Components/Users/Users';
+import axios from 'axios';
 
 function App() {
   const [users, setUsers] = useState([]);

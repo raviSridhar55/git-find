@@ -86,9 +86,9 @@ a:hover {
   cursor: pointer;
 }
 
-.navbar .logo h1 {
+.navbar .logo a {
   font-family: 'Source Code Pro', monospace;
-  font-size: 2rem;
+  font-size: 1.5rem;
   user-select: none;
   cursor: pointer;
 }
@@ -133,7 +133,7 @@ a:hover {
   top: 0;
   right: 0;
   border-radius: 50%;
-  color: #07051a;
+  color: var(--overlay-main);
   text-align: center;
   font-size: 1.2em;
   transition: all 1s;
@@ -148,7 +148,7 @@ a:hover {
 }
 
 .search-form:hover .fa {
-  background: #07051a;
+  background: var(--overlay-main);
   color: white;
 }
 
@@ -179,7 +179,7 @@ a:hover {
   font-style: italic;
 }
 
-/* DELETE IT */
+/* Card */
 .card {
   height: 150px;
   width: 600px;
@@ -237,20 +237,43 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  padding: ;
 }
 
 .users {
   height: 70%;
-  width: 80%;
+  width: 70%;
   overflow-y: auto;
 }
 
 .users::-webkit-scrollbar {
-  width: 3px;
+  width: 2.5px;
   background-color: none;
 }
 
 .users::-webkit-scrollbar-thumb {
-  background-color: lightskyblue;
+  background-color: var(--overlay-main);
   border-radius: 50px;
+}
+
+@media (max-width: 450px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .search-container {
+    height: 30%;
+    width: 100%;
+  }
+
+  .users-container {
+    height: calc(100% - 30%);
+    width: 100%;
+  }
+
+  .users {
+    overflow-y: hidden;
+    overflow-x: auto;
+    height: 100%;
+  }
 }

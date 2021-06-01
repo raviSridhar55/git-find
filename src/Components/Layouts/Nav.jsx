@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
 const Nav = () => {
   return (
     <nav className='navbar container'>
       <div className='logo'>
-        <h1>
+        <a href='/'>
           <span className='yellow'>$git</span>-find
-        </h1>
+        </a>
       </div>
     </nav>
   );
