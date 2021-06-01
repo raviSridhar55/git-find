@@ -28,11 +28,12 @@ const Search = () => {
             />
             <i className='fa fa-search' />
           </form>
+
+          <div className='ravi'></div>
         </div>
       </div>
     </div>
   );
 };
-
 
 export default Search;
