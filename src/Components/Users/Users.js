@@ -1,16 +1,21 @@
 import React from "react";
 import UserItem from "./UserItem";
+import Spinner from "../Layouts/Spinner";
 
-const Users2 = ({ users }) => {
-  return (
-    <div className='users-container'>
-      <div className='users'>
-        {users.map((user) => (
-          <UserItem key={user.id} user={user} />
-        ))}
+const Users = ({ users, loading }) => {
+  if (loading) {
+    return <Spinner />;
+  } else {
+    return (
+      <div className='users-container'>
+        <div className='users'>
+          {users.map((user) => (
+            <UserItem key={user.id} user={user} />
+          ))}
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 };
 
-export default Users2;
+export default Users;
