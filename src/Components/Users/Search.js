@@ -1,8 +1,8 @@
-import { useState } from "react";
-import React from "react";
+import { useState } from 'react';
+import React from 'react';
 
 const Search = ({ searchUsers }) => {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState('');
 
   const onChange = (e) => {
     setSearch(e.target.value);
@@ -11,7 +11,7 @@ const Search = ({ searchUsers }) => {
   const onSubmit = (e) => {
     e.preventDefault();
     searchUsers(search);
-    setSearch(" ");
+    setSearch(' ');
   };
 
   return (
@@ -29,6 +29,10 @@ const Search = ({ searchUsers }) => {
             />
             <i className='fa fa-search' />
           </form>
+
+          <button type='submit'>
+            <a href='/'>Refresh</a>
+          </button>
         </div>
       </div>
     </div>
