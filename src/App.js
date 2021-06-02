@@ -7,6 +7,7 @@ import axios from "axios";
 
 function App() {
   const [users, setUsers] = useState([]);
+  const [keyword, setKeyword] = useState("");
   const [loading, setLoading] = useState(false);
 
   // useEffect(() => {
@@ -21,6 +22,7 @@ function App() {
       `https://api.github.com/search/users?q=${search}&client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
     );
     setUsers(res.data.items);
+    setKeyword(search);
     setLoading(false);
   };
 
@@ -29,7 +31,7 @@ function App() {
       <Nav />
       <div className='main-layout'>
         <Search searchUsers={searchUsers} />
-        <Users users={users} loading={loading} />
+        <Users users={users} loading={loading} keyword={keyword} />
       </div>
     </div>
   );
