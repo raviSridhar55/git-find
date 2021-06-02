@@ -11,6 +11,7 @@ const Search = ({ searchUsers }) => {
   const onSubmit = (e) => {
     e.preventDefault();
     searchUsers(search);
+    setSearch(" ");
   };
 
   return (
