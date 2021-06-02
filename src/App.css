@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap");
 :root {
   --overlay-main: #3d6cb9;
   --overlay-left: rgba(0, 0, 0, 0.65);
@@ -12,7 +12,7 @@
 }
 
 body {
-  font-family: 'Cabin', sans-serif;
+  font-family: "Cabin", sans-serif;
   line-height: 1.4;
   color: white;
   background: url(./img/background.png) center center/cover no-repeat;
@@ -20,7 +20,7 @@ body {
 }
 
 body::after {
-  content: '';
+  content: "";
   position: absolute;
   height: 100%;
   width: 100%;
@@ -87,7 +87,7 @@ a:hover {
 }
 
 .navbar .logo a {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-size: 1.5rem;
   user-select: none;
   cursor: pointer;
@@ -275,5 +275,52 @@ a:hover {
     overflow-y: hidden;
     overflow-x: auto;
     height: 100%;
+  }
+}
+
+.hero {
+  height: 100vh;
+  width: 70%;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: black; */
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.8;
+  z-index: -10;
+}
+
+.loader {
+  height: 100px;
+  width: 100px;
+}
+
+.loading {
+  height: 100%;
+  width: 100%;
+}
+
+.loading img {
+  height: 100%;
+  animation: App-logo-spin infinite 0.5s linear;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
